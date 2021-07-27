@@ -22,13 +22,105 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 0;
   background-color: #3c3a39;
   color: white;
 }
 
 #desktop-nav, #desktop-nav ul {
   display: none;
+}
+
+.header-padding {
+  padding: 15px;
+}
+
+.no_show {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#mobile-nav {
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+  top: 0;
+}
+
+.mobile-nav-container {
+  position: relative;
+}
+
+#mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 48px;
+}
+
+#mobile-nav .nav-link, .mobile-logo {
+  color: #000;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+#mobile-nav li:hover {
+  text-decoration: underline;
+  transform: scale(1.25);
+}
+
+.nav-design-up {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: calc(100% - 116px);
+}
+
+.nav-design-down {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  bottom: 0;
+  width: 100%;
+}
+
+.close_icon {
+  padding: 32px;
+  position: absolute;
+  display: block;
+  transform: scale(1.45);
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.close_icon:hover {
+  opacity: 75%;
+  cursor: pointer;
+  animation: rotation 250ms ease-out;
+  animation-iteration-count: 1;
 }
 
 #logo {
@@ -39,13 +131,18 @@ header {
   line-height: 24px;
 }
 
-.menu-bars {
+#menu-bar {
   background: transparent;
   border: none;
   outline: none;
 }
 
-.menu-bars i {
+#menu-bar:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+#menu-bar i {
   width: 18px;
   height: 12px;
   color: white;
@@ -428,6 +525,14 @@ textarea {
     display: none;
   }
 
+  #logo {
+    display: inline-block;
+  }
+
+  .show {
+    display: none;
+  }
+
   .desktop-icon {
     display: block;
     height: 50%;
@@ -440,7 +545,7 @@ textarea {
     justify-content: center;
   }
 
-  .menu-bars {
+  #menu-bar {
     display: none;
   }
 
