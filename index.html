@@ -9,9 +9,9 @@
     <title>Aziz Mejri - Portfolio</title>
   </head>
   <body>
-    <header>
+    <header class="header-padding">
       <h1 id="logo">Aziz Mejri</h1>
-      <button type="button" class="menu-bars">
+      <button type="button" id="menu-bar" onclick="openMenu()">
         <i class="fas fa-bars"></i>
       </button>
       <nav id="desktop-nav">
@@ -24,6 +24,25 @@
             ></a>
           </li>
         </ul>
+      </nav>
+      <nav id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-container">
+          <img src="media/svg/image_geometry_menu_1.svg" alt="design-up" class="nav-design-up">
+          <button type="button" class="menu-close" onclick="closeMenu()">
+            <img src="media/svg/close_icon.svg" alt="close_icon" class="close_icon">
+          </button>
+          <ul>
+            <h2 class="mobile-logo">Aziz Mejri</h2>
+            <li><a class="nav-link" href="#projects">Portoflio</a></li>
+            <li><a class="nav-link" href="#about-me">About</a></li>
+            <li>
+              <a class="nav-link" href="#contact"
+                >Contact <i class="far fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+          <img src="media/svg/image_geometry_menu_2.svg" alt="design-down" class="nav-design-down">
+        </div>
       </nav>
     </header>
     <main>
@@ -442,5 +461,6 @@
       src="https://kit.fontawesome.com/e966a3bd22.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
