@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "babel-eslint": "^10.1.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "standard": "^16.0.3",
+    "stream": "0.0.2"
+  }
+}
