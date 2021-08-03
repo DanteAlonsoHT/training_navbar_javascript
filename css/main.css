@@ -55,7 +55,7 @@ header {
 .nav-design-up {
   position: absolute;
   display: block;
-  z-index: 5;
+  z-index: 2;
   top: 0;
   left: 0;
   width: calc(100% - 116px);
